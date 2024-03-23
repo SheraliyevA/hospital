@@ -23,10 +23,17 @@ urlpatterns = [
  path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-    path('tashxis/', TashxisList.as_view(), name='tashxis-list'),
-    path('tashxis/<int:id>/', TashxisDetail.as_view(), name='tashxis-detail'),
-    path('bemor/', BemorList.as_view()),
-    path('bemor/<int:id>', BemorDetail.as_view(), name='bemor-detail'),
+   path('s/',TashxisStats.as_view()),
+   path('a',Statistikaa.as_view()),
+   path('w/',statistika),
+   path('q/',St.as_view()),
+   # path('bemor/create/', BemorCreateAPIView.as_view(), name='bemor-create'),
+   #  path('tashxis/create/', TashxisCreateAPIView.as_view(), name='tashxis-create'),
+   #  path('bemor/detail/<int:pk>/', BemorDetailAPIView.as_view(), name='bemor-detail'),
+   #  path('tashxis/detail/<int:pk>/', TashxisDetailAPIView.as_view(), name='tashxis-detail'),
+   #  path('statistika/',TashxisStatisticsAPIView.as_view()),
+    path('q/<int:pk>/',TashxisDetail.as_view()),
+   #  path('ta/<int:bemor_id>/',TashxisSoniView.as_view())
 
 
 

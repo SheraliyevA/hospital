@@ -11,7 +11,7 @@ from django.db.models import Q, F, Sum, Min, Max
 
 from .serializers import *
 from .models import *
-from klinika.models import Tashxis
+# from klinika.models import Tashxis
 
 class ChangePasswordView(APIView):
     parser_classes = [MultiPartParser, JSONParser]
